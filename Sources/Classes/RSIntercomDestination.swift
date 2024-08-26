@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RudderStack
+import Rudder
 import Intercom
 
 class RSIntercomDestination: RSDestinationPlugin {
@@ -20,20 +20,32 @@ class RSIntercomDestination: RSDestinationPlugin {
         if let destination = serverConfig.getDestination(by: key), let config = destination.config?.dictionaryValue {
             if let mobileApiKey = config["mobileApiKeyIOS"] as? String, let appId = config["appId"] as? String {
                 Intercom.setApiKey(mobileApiKey, forAppId: appId)
-                if let traits = client?.context?["traits"] as? [String: Any], let userId = traits["userId"] as? String {
-                    Intercom.registerUser(withUserId: userId)
+                
+                if let traits = client?.context?["traits"] as? [String: Any]{
+                    let userAttributes = ICMUserAttributes()
+                    userAttributes.userId = traits["userId"] as? String
+                    if let userId =  userAttributes.userId {
+                     
+                        Intercom.loginUser(with: userAttributes)
+                    }
+                  
                 } else {
-                    Intercom.registerUnidentifiedUser()
+                   
+                    Intercom.loginUnidentifiedUser()
                 }
             }
         }
     }
     
     func identify(message: IdentifyMessage) -> IdentifyMessage? {
-        if let userId = message.userId {
-            Intercom.registerUser(withUserId: userId)
+        let userAttributes = ICMUserAttributes()
+        userAttributes.userId = message.userId
+        if let userId =  userAttributes.userId {
+          
+            Intercom.loginUser(with: userAttributes)
         } else {
-            Intercom.registerUnidentifiedUser()
+           
+            Intercom.loginUnidentifiedUser()
         }
         
         if let traits = message.traits {
@@ -68,7 +80,7 @@ class RSIntercomDestination: RSDestinationPlugin {
                 }
             }
             userAttributes.customAttributes = customAttributes
-            Intercom.updateUser(userAttributes)
+            Intercom.updateUser(with: userAttributes)
         }
         return message
     }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RudderStack
+import Rudder
 import RudderIntercom
 
 @UIApplicationMain
@@ -18,22 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let config: RSConfig = RSConfig(writeKey: "1wvsoF3Kx2SczQNlx1dvcqW9ODW")
-            .dataPlaneURL("https://rudderstacz.dataplane.rudderstack.com")
+        let config: RSConfig = RSConfig(writeKey: "<WRITE_KEY>")
+            .dataPlaneURL("<DATA_PLANE_URL>")
             .loglevel(.debug)
             .trackLifecycleEvents(true)
             .recordScreenViews(true)
         
-        client = RSClient(config: config)
-
-        client?.add(destination: RudderIntercomDestination())
-        client?.track("Track 1")
+        RSClient.sharedInstance().configure(with: config)
+        RSClient.sharedInstance().addDestination(RudderIntercomDestination())
+        RSClient.sharedInstance().track("Track 1")
+        RSClient.sharedInstance().track("test_user_id_2")
+        RSClient.sharedInstance().track("daily_rewards_claim")
+        RSClient.sharedInstance().track("level_up")
+        RSClient.sharedInstance().track("revenue")
         
-        client?.identify("test_user_id_2")
-        
-        client?.track("daily_rewards_claim")
-        client?.track("level_up")
-        client?.track("revenue")
         
         return true
     }

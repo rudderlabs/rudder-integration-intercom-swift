@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61778A14A80BA666DA3BA487 /* Pods_RudderIntercom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4DBB9FF6FE0B28CFC87C39 /* Pods_RudderIntercom.framework */; };
+		E2492D25C44522314FCFB4F3 /* Pods_RudderIntercom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE17C2CCA82F2A8D2B93AE9 /* Pods_RudderIntercom.framework */; };
 		ED2A28F82770570400646788 /* RudderIntercom.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2A28F72770570400646788 /* RudderIntercom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDF68FE727D1FD620005AAC6 /* RSIntercomDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF68FE627D1FD620005AAC6 /* RSIntercomDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B4DBB9FF6FE0B28CFC87C39 /* Pods_RudderIntercom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RudderIntercom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC41D94B3DE9EB1C86258C92 /* Pods-RudderIntercom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RudderIntercom.release.xcconfig"; path = "Target Support Files/Pods-RudderIntercom/Pods-RudderIntercom.release.xcconfig"; sourceTree = "<group>"; };
-		E3CE49C7E11D615C46D39341 /* Pods-RudderIntercom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RudderIntercom.debug.xcconfig"; path = "Target Support Files/Pods-RudderIntercom/Pods-RudderIntercom.debug.xcconfig"; sourceTree = "<group>"; };
+		32A1046DB51DF5B025129AD0 /* Pods-RudderIntercom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RudderIntercom.debug.xcconfig"; path = "Target Support Files/Pods-RudderIntercom/Pods-RudderIntercom.debug.xcconfig"; sourceTree = "<group>"; };
+		9CE17C2CCA82F2A8D2B93AE9 /* Pods_RudderIntercom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RudderIntercom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7D5A93759CD6674ACCB0EF /* Pods-RudderIntercom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RudderIntercom.release.xcconfig"; path = "Target Support Files/Pods-RudderIntercom/Pods-RudderIntercom.release.xcconfig"; sourceTree = "<group>"; };
 		ED2A28EB2770560400646788 /* RudderIntercom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RudderIntercom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2A28F72770570400646788 /* RudderIntercom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RudderIntercom.h; sourceTree = "<group>"; };
 		ED2A28FA2770591E00646788 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61778A14A80BA666DA3BA487 /* Pods_RudderIntercom.framework in Frameworks */,
+				E2492D25C44522314FCFB4F3 /* Pods_RudderIntercom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,16 +40,16 @@
 		208F25C796D8593BF8DAB48E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E3CE49C7E11D615C46D39341 /* Pods-RudderIntercom.debug.xcconfig */,
-				CC41D94B3DE9EB1C86258C92 /* Pods-RudderIntercom.release.xcconfig */,
+				32A1046DB51DF5B025129AD0 /* Pods-RudderIntercom.debug.xcconfig */,
+				AA7D5A93759CD6674ACCB0EF /* Pods-RudderIntercom.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		75A017F2B0517BBF425C2DD3 /* Frameworks */ = {
+		88FB8BC975709A71833A4B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B4DBB9FF6FE0B28CFC87C39 /* Pods_RudderIntercom.framework */,
+				9CE17C2CCA82F2A8D2B93AE9 /* Pods_RudderIntercom.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,7 +64,7 @@
 				ED2A28F52770570400646788 /* Sources */,
 				ED2A28EC2770560400646788 /* Products */,
 				208F25C796D8593BF8DAB48E /* Pods */,
-				75A017F2B0517BBF425C2DD3 /* Frameworks */,
+				88FB8BC975709A71833A4B7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED2A28F22770560400646788 /* Build configuration list for PBXNativeTarget "RudderIntercom" */;
 			buildPhases = (
-				79DC704ACAEBDE299CEA203D /* [CP] Check Pods Manifest.lock */,
+				2ACFBEF9DEFA31860245F4CE /* [CP] Check Pods Manifest.lock */,
 				ED2A28E62770560400646788 /* Headers */,
 				ED2A28E72770560400646788 /* Sources */,
 				ED2A28E82770560400646788 /* Frameworks */,
@@ -178,7 +178,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		79DC704ACAEBDE299CEA203D /* [CP] Check Pods Manifest.lock */ = {
+		2ACFBEF9DEFA31860245F4CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,7 +338,7 @@
 		};
 		ED2A28F32770560400646788 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3CE49C7E11D615C46D39341 /* Pods-RudderIntercom.debug.xcconfig */;
+			baseConfigurationReference = 32A1046DB51DF5B025129AD0 /* Pods-RudderIntercom.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -371,7 +371,7 @@
 		};
 		ED2A28F42770560400646788 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC41D94B3DE9EB1C86258C92 /* Pods-RudderIntercom.release.xcconfig */;
+			baseConfigurationReference = AA7D5A93759CD6674ACCB0EF /* Pods-RudderIntercom.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;

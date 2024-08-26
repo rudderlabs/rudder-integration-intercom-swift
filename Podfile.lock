@@ -1,30 +1,28 @@
 PODS:
-  - Intercom (12.0.0)
+  - Intercom (17.2.1)
+  - Rudder (2.0.1)
   - RudderIntercom (1.0.0):
-    - Intercom (= 12.0.0)
-    - RudderStack
-  - RudderStack (1.0.0-beta.2)
+    - Intercom (= 17.2.1)
+    - Rudder (~> 2.0.0)
 
 DEPENDENCIES:
-  - Intercom (= 12.0.0)
+  - Rudder (~> 2.0.0)
   - RudderIntercom (from `.`)
-  - RudderStack (from `~/Documents/Rudder/RudderStack-Cocoa/`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Intercom
+    - Rudder
 
 EXTERNAL SOURCES:
   RudderIntercom:
     :path: "."
-  RudderStack:
-    :path: "~/Documents/Rudder/RudderStack-Cocoa/"
 
 SPEC CHECKSUMS:
-  Intercom: d706bc52b0e80758b38ceadce9143b76577100fb
-  RudderIntercom: cd7eff26c98b3dcce849b565493641b56409626b
-  RudderStack: a8d61f92379d6b230a6c7ff302e7f923db5329fc
+  Intercom: 3e9e26c8e2d0655e8f7527c395e570bb7733d5fa
+  Rudder: 463af33116984b97f2a19d344e9ad491f164e43e
+  RudderIntercom: c8b236b78d37422430284f078b824f5bc3768727
 
-PODFILE CHECKSUM: 7c358c4cd11e27c1baaba18d62e0b29573065fc4
+PODFILE CHECKSUM: be822288d1e6c4e8f08395d884307a433cb1c4df
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2

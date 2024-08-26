@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-@import RudderStack;
+@import Rudder;
 @import RudderIntercom;
 
 @interface AppDelegate ()
@@ -19,22 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    RSConfig *config = [[RSConfig alloc] initWithWriteKey:@"1wvsoF3Kx2SczQNlx1dvcqW9ODW"];
-    [config dataPlaneURL:@"https://rudderstacz.dataplane.rudderstack.com"];
+    RSConfig *config = [[RSConfig alloc] initWithWriteKey:@"<WRITE_KEY>"];
+    [config dataPlaneURL:@"<DATA_PLANE_URL>"];
     [config loglevel:RSLogLevelDebug];
     [config trackLifecycleEvents:YES];
     [config recordScreenViews:YES];
+    [[RSClient sharedInstance] configureWith:config];
+    [[RSClient sharedInstance] addDestination:[[RudderIntercomDestination alloc] init]];
+    [[RSClient sharedInstance] track:@"Track 1"];
+    [[RSClient sharedInstance] identify:@"test_user_id"];
+    [[RSClient sharedInstance] track:@"daily_rewards_claim"];
+    [[RSClient sharedInstance] track:@"level_up"];
+    [[RSClient sharedInstance] track:@"revenue"];
     
-    RSClient *client = [[RSClient alloc] initWithConfig:config];
-    
-    [client addWithDestination:[[RudderIntercomDestination alloc] init]];
-    [client track:@"Track 1" properties:NULL option:NULL];
-    
-    [client identify:@"test_user_id" traits:NULL option:NULL];
-    
-    [client track:@"daily_rewards_claim" properties:NULL option:NULL];
-    [client track:@"level_up" properties:NULL option:NULL];
-    [client track:@"revenue" properties:NULL option:NULL];
     
     return YES;
 }
