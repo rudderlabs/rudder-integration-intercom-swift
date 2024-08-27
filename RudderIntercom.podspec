@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'RudderIntercom'
-    s.version          = '2.0.0'
+    s.version          = '1.0.0'
     s.summary          = 'Privacy and Security focused Segment-alternative. Intercom Native SDK integration support.'
 
     s.description      = <<-DESC
