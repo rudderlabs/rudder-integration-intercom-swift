@@ -1,12 +1,12 @@
 PODS:
   - Intercom (17.2.1)
-  - Rudder (2.0.1)
+  - Rudder (2.4.3)
   - RudderIntercom (1.0.0):
     - Intercom (= 17.2.1)
-    - Rudder (~> 2.0.0)
+    - Rudder (~> 2.0)
 
 DEPENDENCIES:
-  - Rudder (~> 2.0.0)
+  - Rudder (~> 2.0)
   - RudderIntercom (from `.`)
 
 SPEC REPOS:
@@ -20,9 +20,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Intercom: 3e9e26c8e2d0655e8f7527c395e570bb7733d5fa
-  Rudder: 463af33116984b97f2a19d344e9ad491f164e43e
-  RudderIntercom: c8b236b78d37422430284f078b824f5bc3768727
+  Rudder: 6d2c0775d5b606e05e00670615ee7f9c0c6d2813
+  RudderIntercom: 53f5939bb275a61b7b87ee3e425329bfa724c199
 
-PODFILE CHECKSUM: be822288d1e6c4e8f08395d884307a433cb1c4df
+PODFILE CHECKSUM: 7a7e5f0365743c030f0824caa703c3341a41cd37
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

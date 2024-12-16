@@ -5,7 +5,7 @@ inhibit_all_warnings!
 platform :ios, '15.0'
 
 def shared_pods
-    pod 'Rudder', '~> 2.0.0'
+    pod 'Rudder', '~> 2.0'
 end
 
 target 'RudderIntercom' do
